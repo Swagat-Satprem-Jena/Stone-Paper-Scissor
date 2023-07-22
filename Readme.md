@@ -1,7 +1,7 @@
-# Rochambeau - ML Game
+# Stone-Paper-Scissor - ML Game
 
-![Rochambeau Logo](https://user-images.githubusercontent.com/88606859/255312709-2b886e88-ade9-4352-93d5-42ce5fe04755.png)
-Rochambeau is a machine learning-powered game that allows users to play the classic game of "Stone, Paper, Scissors" with a twist. Instead of using traditional input methods, this game leverages the power of computer vision to let players use their hand gestures as the playing tool - Stone, Paper, or Scissors.
+![Stone-Paper-Scissor Logo](https://user-images.githubusercontent.com/88606859/255312709-2b886e88-ade9-4352-93d5-42ce5fe04755.png)
+Stone-Paper-Scissor is a machine learning-powered game that allows users to play the classic game of "Stone, Paper, Scissors" with a twist. Instead of using traditional input methods, this game leverages the power of computer vision to let players use their hand gestures as the playing tool - Stone, Paper, or Scissors.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ Rochambeau is a machine learning-powered game that allows users to play the clas
 - [Play Demo Video](#play-demo-video)
 ## Introduction
 
-Rochambeau is a fun and interactive machine learning game that showcases the potential of computer vision and artificial intelligence. The game is built using Django, a high-level web framework, and OpenCV, a popular computer vision library. With Rochambeau, players can experience an innovative twist to the traditional Stone, Paper, Scissors game by using their hand gestures captured through their camera.
+Stone-Paper-Scissor is a fun and interactive machine learning game that showcases the potential of computer vision and artificial intelligence. The game is built using Django, a high-level web framework, and OpenCV, a popular computer vision library. With Stone-Paper-Scissor, players can experience an innovative twist to the traditional Stone, Paper, Scissors game by using their hand gestures captured through their camera.
 
 ## Features
 
