@@ -1,43 +1,79 @@
-# Stone-Paper-Scissors
+# Rochambeau - ML Game
+
+![Rochambeau Logo](https://user-images.githubusercontent.com/88606859/255312709-2b886e88-ade9-4352-93d5-42ce5fe04755.png)
+Rochambeau is a machine learning-powered game that allows users to play the classic game of "Stone, Paper, Scissors" with a twist. Instead of using traditional input methods, this game leverages the power of computer vision to let players use their hand gestures as the playing tool - Stone, Paper, or Scissors.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [How to Play](#how-to-play)
+- [Play Demo Video](#play-demo-video)
 ## Introduction
 
-<!-- Using mediapipe, we collected a large amount of data in the form of hand landmarks. To predict the user's movement, a Deep Neural Network model was developed using the landmark data.<br> -->
+Rochambeau is a fun and interactive machine learning game that showcases the potential of computer vision and artificial intelligence. The game is built using Django, a high-level web framework, and OpenCV, a popular computer vision library. With Rochambeau, players can experience an innovative twist to the traditional Stone, Paper, Scissors game by using their hand gestures captured through their camera.
 
-Let’s begin with recalling the classic game of ***“Stone Paper Scissors”***. usually played between two people, in which each player simultaneously forms one of three patterns amongst the stone, paper, or scissors with the hands. This project is a web application, in which users can play the game with the computer using the webcam. So, there is a need to build a classifier that takes images of hands as inputs and gives the user’s expected to move as output.
-.<br>
+## Features
 
-The fundamental rules of Rock, Paper, Scissors apply:<br>
-  -> Scissors are defeated by Rock.<br>
-  -> Scissors cut paper.<br>
-  -> Paper is defeated by Scissors.<br>
+- Play Stone, Paper, Scissors against the computer using hand gestures.
+- Seamless integration of computer vision to recognize and interpret hand gestures.
+- User-friendly interface for an engaging gaming experience.
+- Real-time camera feed to capture and analyze hand gestures.
+- Interactive computer opponent with varying levels of difficulty.
+- Score tracking to keep track of your wins, losses, and ties.
 
-## Web App Sample Image
-![Sample](https://github.com/aryan7781/Stone-Paper-Scissor/blob/master/images/Sample_game_img.png)
+## Technologies Used
 
-## [Development Of Machine Learning Model](https://github.com/aryan7781/Stone-Paper-Scissor/blob/master/Hand_Tracker/EDA%20and%20Machine%20Learning%20Model%20Selection/Landmarks_Analysis_for_sps.ipynb)<sub>Link to IPython Notebook</sub>
-For the project, there is a need to build a classifier that takes images of hands as inputs and gives the user’s expected to move as output. Mediapipe is a library by Google that provides solutions for the recognition of key hand points. We use the library to gather Hand Landmarks for the three patterns that have meaning to the project i.e., Stone, Paper, and Scissors. The Hand Landmark Model in Mediapipe allows us to collect precise key points for 21 hand-knuckle coordinates on x and y axes inside the detected hand region.
+- Django: A high-level Python web framework that simplifies web development.
+- OpenCV: A popular computer vision library used for image and video processing.
+- Python: The primary programming language used for developing the backend and machine learning algorithms.
+- HTML/CSS/JavaScript: Used for creating the user interface and frontend elements.
+- Bootstrap: A front-end framework for responsive and attractive UI design.
+
+## Setup
+
+To run Stone-Paper-Scissor on your local machine, follow these steps:
+
+1. Clone the repository from GitHub:
+```bash
+git clone https://github.com/Swagat-Satprem-Jena/Stone-Paper-Scissor.git
+cd Stone-Paper-Scissor
+```
+
+2. Set up a virtual environment (optional but recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate # On Windows: venv\Scripts\activate
+```
+
+3. Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+5. Open your web browser and go to `http://localhost:8000` to access Stone-Paper-Scissor.
+
+## How to Play
+
+1. Launch Stone-Paper-Scissor->play->single player and allow camera access.
+2. Click on S-P-S button and Position your hand in front of the camera, and the game will detect your gesture as one of the following: Stone, Paper, or Scissors.
+3. The computer opponent will also make its choice simultaneously.
+4. The game will determine the winner according to the classic rules: Stone beats Scissors, Scissors beats Paper, and Paper beats Stone.
+5. Your score will be updated based on the game's outcome.
+6. Play multiple rounds and try to beat the computer!
 
 
+## Play Demo Video
+[![Stone-Paper-Scissor Gameplay Video](https://user-images.githubusercontent.com/88606859/255312709-2b886e88-ade9-4352-93d5-42ce5fe04755.png)](https://youtu.be/2cmh1YycJHg)
 
-
-**Dataset-** 15 thousand samples each for the patterns: “Stone”, “Paper”, and “Scissors” were collected, and used to construct a Machine Learning Model to classify new images(that has a hand representing one of the above patterns) into its respective class. These samples were used to build a machine learning model for the classification.
-
-
-**ML Model-** After making required transformations in the dataset, in order to make the training smooth, and increase the expected accuracy of the model, a few fundamental Machine Learning Models like *K-Nearest Neighbors, Support Vector Classifier, Random Forests Classifier, and Extreme Gradient Boosting* were trained over the dataset, and their evaluation metrics were compared.
-
-
-**Evaluation Of Models-** <br>
-	-> We need a model, with high accuracy (of course, accuracy is almost always our first priority when it comes to building machine learning models).<br>
-	-> The prediction time for our model, on a given dataset should be as low as possible. This is because the model has to be used to make real-time predictions on live videos of someone playing our game.
-	
-	
-**Chosen Model-**<br>
-The pipeline that was chosen for classification in our project-<br>
-Pipeline(steps=[<br>
-&emsp;&emsp;&emsp;('transformer', Update_and_drop()),<br> 
-&emsp;&emsp;&emsp;('scaler', StandardScaler()),<br>
-&emsp;&emsp;&emsp;('clf', XGBClassifier(<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;learning_rate=0.5,<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;max_depth=5,<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;n_estimators=250))])<br>
-
+We hope you enjoy playing Stone-Paper-Scissor as much as we enjoyed building it! If you have any questions or feedback, feel free to contact us at [swagatjena12@gmail.com](mailto:swagatjena12@gmail.com). Happy gaming!
